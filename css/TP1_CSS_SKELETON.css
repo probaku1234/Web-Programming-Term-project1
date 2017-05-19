@@ -1,0 +1,328 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0px;
+}
+
+
+/* Menu bar Start */
+
+nav.Bar {
+  z-index: 3;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  box-sizing: border-box;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+nav.Bar button {
+  background-color: #3c404c;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+#GuestbookButton {
+  z-index: 3;
+}
+
+#dropdown_menu_wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 200px;
+  z-index: 1;
+}
+
+#dropdown_menu {
+  color: #FFFFFF;
+  list-style: none;
+  display: none;
+  z-index: 2;
+  float: right;
+  top: 0px;
+}
+
+#dropdown_menu button {
+  text-align: center;
+  border: 1px solid #ccc;
+  float: none;
+}
+
+#dropdown_button {
+  background-image: url("../img/dropdown_button/dropdown_button.PNG");
+  background-repeat: no-repeat;
+  float: right;
+}
+
+
+/* Menu bar End */
+
+
+/* Main Start */
+
+section {
+  top: 0px;
+}
+
+
+/* Image Slide Start*/
+
+.ImageSlide {
+  position: relative;
+  height: 600px;
+  z-index: 0;
+}
+
+.ImageSlide img {
+  width: 100%;
+  display: none;
+  position: absolute;
+  height: inherit;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slideOutRight {
+  animation-name: slideOutRight;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.slideOutLeft {
+  animation-name: slideOutLeft;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+div.ImageSlide, div.Gallery {
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+div.slideIndicator {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+}
+
+#rightBtn, #leftBtn {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.button {
+  cursor: pointer;
+}
+
+
+/* Image Slide End*/
+
+
+/*Introduce Start */
+
+div.Introduce {
+  outline: none;
+  width: 100%;
+}
+
+div.Description {
+  width: 100%;
+}
+
+.DescriptionImg {
+  width: 100%;
+}
+
+.Introduce h1, h2, h3 {
+  text-align: center;
+}
+
+
+/* Introduce End*/
+
+.currentImg {
+  border: 1px solid;
+  border-radius: 50%;
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  color: #FFFFFF;
+}
+
+
+/*Gallery Start */
+
+.Gallery {
+  clear: both;
+}
+
+div.Gallery {
+  background-color: #FFFFFF;
+}
+
+.Gallery h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.Gallery img {
+  width: 100%;
+  display: block;
+}
+
+#Gallery {
+  clear: both;
+}
+
+.GalleryImageWrapper {
+  float: left;
+  position: relative;
+  padding: 0.625em 0.625em;
+  cursor: pointer;
+  width: 30%;
+}
+
+.ImageParagraph {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: green;
+  text-align: center;
+  color: #fff;
+  left: 25%;
+  bottom: 25%;
+  height: 10%;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.DeleteButton {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 2;
+}
+
+
+/*Gallery End*/
+
+
+/*Guestbook Start*/
+
+.Guestbook {
+  clear: both;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Guestbook h1 {
+  width: 100%;
+  text-align: center;
+}
+
+#Guestbook_contents {
+  display: block;
+}
+
+.contentsBox {
+  background-color: grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#ogpImg {
+  float: left;
+}
+/*Guestbook End*/
+
+
+/* Main End */
+
+
+/* Footer Start */
+
+footer {
+  display: block;
+  padding: 1.5em 0;
+  background-color: #3c404c;
+}
+
+footer p {
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 71.25em;
+  margin: 0px auto;
+  font-size: 100%;
+  padding: 0 0.625em;
+}
+
+#footer span {
+  text-decoration: underline;
+}
+
+
+/* Footer End */

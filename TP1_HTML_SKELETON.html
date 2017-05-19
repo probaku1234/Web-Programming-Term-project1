@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>PIKACTSU~~!!</title>
+	<!-- CSS, JS External 정의 -->
+	<link rel="stylesheet" type="text/css" href="./css/TP1_CSS_SKELETON.css">
+	<link rel="stylesheet" type="text/css" href="./css/modal.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.ajax-cross-origin.min.js"></script>
+	<script type="text/javascript" src="./js/TP1_JAVASCRIPT.js"></script>
+	</script>
+</head>
+
+<body class="size-1140">
+	<!-- 레이아웃은 HTML5 엘리먼트를 사용할 것 -->
+	<header>
+		<!-- Header (Menu bar) -->
+		<nav class="Bar">
+			<button class="Menu" id="HomeButton" onmouseover="menuMouseOver(this)" onmouseout="menuMouseOut(this)">HOME</button>
+			<button class="Menu" id="ImageSlideButton" onclick="menuButtonClick('ImageSlide')" onmouseover="menuMouseOver(this)" onmouseout="menuMouseOut(this)">IMAGE SLIDE</button>
+			<button class="Menu" id="IntroduceButton" onclick="menuButtonClick('Introduce')" onmouseover="menuMouseOver(this)" onmouseout="menuMouseOut(this)">INTRODUCE</button>
+			<button class="Menu" id="GalleryButton" onclick="menuButtonClick('Gallery')" onmouseover="menuMouseOver(this)" onmouseout="menuMouseOut(this)">GALLERY</button>
+			<button class="Menu" id="GuestbookButton" onclick="menuButtonClick('Guestbook')" onmouseover="menuMouseOver(this)" onmouseout="menuMouseOut(this)">GUEST BOOK</button>
+			<div class="Menu" id="dropdown_menu_wrapper">
+				<button class="Menu" id="dropdown_button"><span style="visibility: hidden">b</span></button>
+				<div class="Menu" id="dropdown_menu">
+					<button class="Menu" id="ImageSlideButton" onclick="menuButtonClick('ImageSlide')" onmouseover="menuMouseOver(this)" onmouseout="menuMouseOut(this)">IMAGE SLIDE</button><br>
+					<button class="Menu" id="IntroduceButton" onclick="menuButtonClick('Introduce')" onmouseover="menuMouseOver(this)" onmouseout="menuMouseOut(this)">INTRODUCE</button><br>
+					<button class="Menu" id="GalleryButton" onclick="menuButtonClick('Gallery')" onmouseover="menuMouseOver(this)" onmouseout="menuMouseOut(this)">GALLERY</button><br>
+					<button class="Menu" id="GuestbookButton" onclick="menuButtonClick('Guestbook')" onmouseover="menuMouseOver(this)" onmouseout="menuMouseOut(this)">GUEST BOOK</button><br>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section>
+		<!-- ImageSlide -->
+		<div class="ImageSlide" id="ImageSlide">
+			<img class="slideImg" src="./img/slideimg/1.jpg" alt="1">
+			<img class="slideImg" src="./img/slideimg/2.jpg" alt="2">
+			<img class="slideImg" src="./img/slideimg/3.jpg" alt="3">
+			<img class="slideImg" src="./img/slideimg/4.jpg" alt="4">
+			<img class="slideImg" src="./img/slideimg/5.jpg" alt="5">
+			<div class="slideIndicator">
+				<span class="slideIndicator button Img" id="leftBtn"><</span>
+				<span class="slideIndicator button currentImg" id="img0Btn"></span>
+				<span class="slideIndicator button currentImg" id="img1Btn"></span>
+				<span class="slideIndicator button currentImg" id="img2Btn"></span>
+				<span class="slideIndicator button currentImg" id="img3Btn"></span>
+				<span class="slideIndicator button currentImg" id="img4Btn"></span>
+				<span class="slideIndicator button Img" id="rightBtn">></span>
+			</div>
+		</div>
+
+		<!-- Introduce -->
+		<div class="Introduce" id="Introduce">
+			<h1>Introduce</h1>
+			<div class="Description" id="DescriptionImgWrapper">
+				<table>
+					<tr>
+						<td><img class="DescriptionImg" src="./img/introduce/big1.jpg" alt="pikachu1"></td>
+						<td><img class="DescriptionImg" src="./img/introduce/big2.png" alt="pikachu2"></td>
+					</tr>
+				</table>
+
+			</div>
+			<div class="Description" id="DescriptionText">
+				<p>
+					<strong>어린시절의 영원한 친구</strong>
+					<br><br> 게임 및 애니메이션 포켓몬스터 시리즈에 등장하는 포켓몬. 담당 성우는 오오타니 이쿠에.
+					<br><br> 보는 바와 같이 귀요미. 그 때문인지 포켓몬 게임의 가장 초기판인 적/녹/청 시절에 게이머들에게 낮은 종족값에도 불구하고 가장 큰 사랑을 받아서 게임이 인기를 끌자 제작된 애니메이션에서는 아예 주인공 포켓몬으로 낙점되었다. 약 800마리 이상에 달하는 포켓몬스터의 캐릭터 중 가장 성공한 캐릭터이며 이런 류의 몬스터 캐릭터 중 세계적으로 유례가 없을 정도로 대성공을 거두었다. 그 인기로 피카츄가 스타팅 포켓몬인 피카츄 버전까지
+					발매되는 기염을 토했다.
+					<br><br> 설치류를 모델로 디자인 되었다. 이름의 유래는 일본어로 '반짝'이라는 뜻의 피카에 쥐를 뜻하는 츄(우는 소리 '찍')을 붙인 것.반짝찍 디자이너는 스기모리 켄이 아니라 니시다 아츠코. 니시다는 햄스터를 모델로 디자인했다고 한다. 우는토끼를 뜻하는 영단어 Pika를 유래로 하였다는 가설도 있었지만 인터뷰를 보면 우연의 일치인 듯.
+					<br><br> 피카츄의 인기 때문인지 매 시리즈마다 피카츄와 비슷한 전기를 쓰는 설치류 포켓몬이 추가된다. 2세대의 피츄, 3세대의 플러시, 마이농, 4세대의 파치리스, 5세대의 에몽가, 6세대의 데덴네, 7세대의 토게데마루. 물론 피카츄의 아성에는 못 미친다.
+					<br><br> 워낙에 인기있는 포켓몬이라 배포 특전기 수도 압도적으로 많다.
+					<br><br> 전기쥐로 몸의 전기주머니가 양쪽 볼에 일부 노출되어 있어 양 볼이 붉으며 이 곳을 통하여 전기를 발산한다. 천둥의 돌을 사용하면 라이츄로 최종진화하며 금/은에서는 공박사가 아기 포켓몬인 피츄를 발견하여 피카츄가 진화한 포켓몬이라는 설정을 추가했다. 사실 1세대에도 피카츄가 이미 진화한 포켓몬이라는 암시가 있긴 하다.
+					<br><br> 4세대에서 암수 구별이 생기면서 암컷의 생김새가 다소 달라졌다. 암컷의 경우, 꼬리 끝이 하트 모양으로 갈라져 있다.</p>
+			</div>
+			<h2>In Animation</h2>
+			<p>
+				애니메이션에서는 주인공 한지우의 스타팅 포켓몬으로 등장한다. 이후 애니메이션 시리즈 내내 한지우와 함께 주인공으로 개근 중.
+				<br><br> 그 외에도 무인편 초창기까지는 피카츄의 숲 에피소드 라던가 파도타기 피카츄 에피소드의 단역 빈센트의 피카츄 "마이클"이라던가 훈이의 피카츄인 "레온" 등 다른 피카츄들도 간간히 등장했지만, 성도지방부터는 지우의 피카츄 외의 다른 피카츄의 출현이 거의 없다시피 하다. BW2 번외편에 암컷 피카츄가 나온 적이 있는데 이 피카츄의 성우는 유리카의 성우인 이세 마리야 라고 한다. 애니판 이외의 영역까지 확장하면 포켓몬 불가사의 던전의
+				첫번째 시리즈인 포켓몬 불가사의 던전 빨강 구조대/파랑 구조대의 특집 애니메이션에서의 성우는 한바 토모에, 포켓몬 불가사의 던전 마그나 게이트 PV에서의 암컷 피카츄의 성우는 쿠기미야 리에로 캐스팅된 적이 있다.
+				<br><br> 그러다가 XY의 영화제작 에피소드에서 대량의 피카츄가 등장한 에피소드가 나왔다. 후파 극장판에서도 대량발생한다. 옷갈아입기 피카츄도 이 에피소드에서 나왔는데, 하드록과 마스크드 피카츄만 평범한 수컷 피카츄로 나왔고 나머지는 꼬리 끝이 검은 옷갈아입기 피카츄로 되어있다.
+				<br><br> XYZ 22화에서는 지미라는 록 가수의 파트너 포켓몬인 피카츄가 등장한다. 이름은 파치파치이며, 사용한 기술은 10만볼트/전광석화/구멍파기/번개펀치. 특이하게 구멍파기를 배운것이 특징. 파치파치의 성우는 나빛나의 팽도리와 같은 코자쿠라 에츠코.
+				<br><br> XYZ 36화부터는 엔딩곡이 피카츄의 노래(ピカチュウの歌)로 바뀌었는데, 처음부터 끝까지 피카츄어로 나온다. 중간부터 자막으로 해석이 나오긴 하지만. 제목답게 피카츄가 단체로 등장하며, 나무에서 케첩이 열리는 것이 웃음 포인트.
+				<br><br> 참고로, 포켓몬스터 제너레이션즈에서는 오리카사 후미코가 맡았다.
+			</p>
+			<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1AGDASAwpobA2J-0fAWkBPAwzTLqkx0uc5eUU9Z_Tk60&font=Default&lang=ko&initial_zoom=2&height=650' width='100%' height='800' webkitallowfullscreen mozallowfullscreen allowfullscreen
+			  frameborder='0'></iframe>
+		</div>
+
+		<!-- Gallery -->
+		<div class="Gallery">
+			<h2>Gallery</h2>
+
+			<div class="modal" id="myModal">
+				<span class="modalButton" id="close">×</span>
+				<span class="modalButton" id="left"><</span>
+				<span class="modalButton" id="right">></span>
+				<img class="modal-content" id="img01">
+				<div id="caption"></div>
+			</div>
+
+			<div class="Gallery" id="Gallery">
+				<div class="GalleryImageWrapper">
+					<button type="button" class="DeleteButton" id="DelButton0">x</button>
+					<p class="ImageParagraph" id="ImageDescription0">HardRock</p>
+					<img class="GalleryImage" id="0" alt="Image 1 Title" src="./img/gallery/Hard_Rock.png">
+				</div>
+				<div class="GalleryImageWrapper">
+					<button type="button" class="DeleteButton" id="DelButton1">x</button>
+					<p class="ImageParagraph" id="ImageDescription1">Madame</p>
+					<img class="GalleryImage" id="1" alt="Image 2 Title" src="./img/gallery/Madame.png">
+				</div>
+				<div class="GalleryImageWrapper">
+					<button type="button" class="DeleteButton" id="DelButton2">x</button>
+					<p class="ImageParagraph" id="ImageDescription2">Idol</p>
+					<img class="GalleryImage" id="2" alt="Image 3 Title" src="./img/gallery/Idol.png">
+				</div>
+				<div class="GalleryImageWrapper">
+					<button type="button" class="DeleteButton" id="DelButton3">x</button>
+					<p class="ImageParagraph" id="ImageDescription3">Doctor</p>
+					<img class="GalleryImage" id="3" alt="Image 4 Title" src="./img/gallery/Doctor.png">
+				</div>
+				<div class="GalleryImageWrapper">
+					<button type="button" class="DeleteButton" id="DelButton4">x</button>
+					<p class="ImageParagraph" id="ImageDescription4">Mask</p>
+					<img class="GalleryImage" id="4" alt="Image 5 Title" src="./img/gallery/Masked.png">
+				</div>
+			</div>
+		</div>
+
+		<!-- Guestbook -->
+		<div class="Guestbook" id="Guestbook">
+			<h1>Guestbook</h1>
+			<div class="Guestbook" id="Guestbook_contents_wrapper"></div>
+
+			<div class="Guestbook">
+				<div class="">
+					Author : <input type="text" id="input_author" name="author" placeholder="author">
+				</div>
+				<div class="">
+					Contents : <input type="text" id="input_contents" name="contents" placeholder="contents">
+				</div>
+
+				<input type="submit" id="input_submit" name="post" value="Post" onclick="appendDiv()">
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<p><span style="color:#FAAC58;">Chungnam National University 201302456</span> LEE YUNSEOB fhzotxldj@gmail.com</p>
+	</footer>
+</body>
+
+</html>
